@@ -1,4 +1,6 @@
-# Flowchart_SumOfEvens
+# Sum of Evens Flowhart
+
+## Description
 Given a positive integer number N. This flowchart calculates and prints the sum of all even numbers till N (inclusive).
 
 ## Wiki
