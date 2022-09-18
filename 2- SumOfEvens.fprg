@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="csfay"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-18 09:03:10 PM"/>
+        <attribute name="created" value="Y3NmYXk7REVTS1RPUC0xVUo3SDhFOzIwMjItMDktMTg7MDg6MDU6MDEgUE07Mjg1OQ=="/>
+        <attribute name="edited" value="Y3NmYXk7REVTS1RPUC0xVUo3SDhFOzIwMjItMDktMTg7MDk6MDM6MTAgUE07NDsyOTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter a single positive integer.&quot;" newline="True"/>
+            <input variable="N"/>
+            <if expression="N&gt;=0">
+                <then>
+                    <output expression="&quot;You entered:&quot; &amp;&quot; &quot;&amp; N" newline="True"/>
+                    <declare name="evensSize, counter, sum" type="Integer" array="False" size=""/>
+                    <assign variable="sum" expression="0"/>
+                    <assign variable="evensSize" expression="N/2+1"/>
+                    <declare name="evensArray" type="Integer" array="True" size="N"/>
+                    <output expression="&quot;There are&quot; &amp; &quot; &quot; &amp; evensSize &amp; &quot; &quot; &amp; &quot;evens till the number&quot; &amp; &quot; &quot; &amp; N" newline="True"/>
+                    <output expression="&quot;Those evens are:&quot;" newline="True"/>
+                    <for variable="counter" start="0" end="N" direction="inc" step="2">
+                        <output expression="counter" newline="True"/>
+                        <assign variable="sum" expression="sum+counter"/>
+                    </for>
+                    <output expression="&quot;And the sum of those evens is:&quot; &amp; &quot; &quot; &amp; sum" newline="True"/>
+                    <declare name="answer" type="String" array="False" size=""/>
+                    <output expression="&quot;Do you want to play again? Answer with only y or n.&quot;" newline="True"/>
+                    <input variable="answer"/>
+                    <if expression="answer = &quot;y&quot;">
+                        <then>
+                            <output expression="&quot;Nice!&quot;" newline="True"/>
+                            <call expression="Main"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Ok. Goodbye, dear. Pleased to meet you.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;You entered a negative number.&quot;" newline="True"/>
+                    <call expression="Main"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
